@@ -1,0 +1,4 @@
+-o "$HOME/Downloads/video-%(title)s-%(id)s.%(ext)s"
+--merge-output-format mp4
+-f 'bestvideo[height<=1080][vcodec^=hevc]+bestaudio/bestvideo[height<=1080][vcodec^=avc1]+bestaudio'
+

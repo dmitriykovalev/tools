@@ -10,8 +10,10 @@ help:
 link:
 	ln -fs $(MAKEFILE_DIR)/play-file-in-mpv.workflow $(SERVICES_DIR)
 	ln -fs $(MAKEFILE_DIR)/play-url-in-mpv.workflow  $(SERVICES_DIR)
+	ln -fs $(MAKEFILE_DIR)/download-url.workflow  $(SERVICES_DIR)
 
 unlink:
 	rm -f $(SERVICES_DIR)/play-file-in-mpv.workflow
 	rm -f $(SERVICES_DIR)/play-url-in-mpv.workflow
+	rm -f $(SERVICES_DIR)/download-url.workflow
 

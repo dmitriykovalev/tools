@@ -8,11 +8,11 @@
 			<key>NSBackgroundColorName</key>
 			<string>background</string>
 			<key>NSIconName</key>
-			<string>NSTouchBarPlay</string>
+			<string>NSTouchBarTransferDownload</string>
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Play video URL in mpv</string>
+				<string>Download video URL</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>

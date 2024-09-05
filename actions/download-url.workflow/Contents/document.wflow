@@ -59,9 +59,14 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>echo "$@" &gt;&gt; "$HOME/.config/mpv/action-play.log"
+					<string>echo "$@" &gt;&gt; "$HOME/.config/yt-dlp/action-download.log"
 
-PATH=$PATH:/opt/homebrew/bin mpv --force-window "$@" &amp;&gt; /dev/null || true</string>
+url="$1"
+if [[ "$url" != https://* ]]; then
+    url="https://$url"
+fi
+
+PATH=$PATH:/opt/homebrew/bin yt-dlp "$url" &amp;&gt; /dev/null || true</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -86,7 +91,7 @@ PATH=$PATH:/opt/homebrew/bin mpv --force-window "$@" &amp;&gt; /dev/null || true
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>90D5BFFD-600F-4915-9142-6BBE4919A702</string>
+				<string>5C4C6252-A240-4740-8505-ED563B2467EB</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -96,9 +101,9 @@ PATH=$PATH:/opt/homebrew/bin mpv --force-window "$@" &amp;&gt; /dev/null || true
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>DFD67E0C-7E79-4DCB-A8E1-9286B8427F67</string>
+				<string>E5763E28-8A5B-4145-9658-297C5E104071</string>
 				<key>UUID</key>
-				<string>E13562C8-EF14-4C03-AA42-58A0D02D39CD</string>
+				<string>27FCFF24-EE55-4CCE-BD85-F30B245B3A67</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -171,10 +176,12 @@ PATH=$PATH:/opt/homebrew/bin mpv --force-window "$@" &amp;&gt; /dev/null || true
 						<string>4</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>409.500000:305.000000</string>
+				<string>409.500000:497.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -191,21 +198,21 @@ PATH=$PATH:/opt/homebrew/bin mpv --force-window "$@" &amp;&gt; /dev/null || true
 		<key>applicationPaths</key>
 		<array/>
 		<key>inputTypeIdentifier</key>
-		<string>com.apple.Automator.fileSystemObject</string>
+		<string>com.apple.Automator.text.url</string>
 		<key>outputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>presentationMode</key>
-		<integer>15</integer>
+		<integer>11</integer>
 		<key>processesInput</key>
 		<false/>
 		<key>serviceInputTypeIdentifier</key>
-		<string>com.apple.Automator.fileSystemObject</string>
+		<string>com.apple.Automator.text.url</string>
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceProcessesInput</key>
 		<false/>
 		<key>systemImageName</key>
-		<string>NSTouchBarPlay</string>
+		<string>NSTouchBarTransferDownload</string>
 		<key>useAutomaticInputType</key>
 		<false/>
 		<key>workflowTypeIdentifier</key>

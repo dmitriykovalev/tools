@@ -1,1 +1,3 @@
 .DS_Store
+configs/yt-dlp/*.log
+

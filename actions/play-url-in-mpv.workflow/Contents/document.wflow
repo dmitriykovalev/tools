@@ -67,7 +67,7 @@ fi
 
 echo "$url" &gt;&gt; "$HOME/.config/mpv/action-play.log"
 
-PATH=$PATH:/opt/homebrew/bin/ /opt/homebrew/bin/mpv "$url" &amp;&gt; /dev/null || true</string>
+PATH=$PATH:/opt/homebrew/bin/ mpv "$url" &amp;&gt; /dev/null || true</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
