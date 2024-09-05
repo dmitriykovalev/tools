@@ -12,7 +12,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Download video URL</string>
+				<string>Download video from URL</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>

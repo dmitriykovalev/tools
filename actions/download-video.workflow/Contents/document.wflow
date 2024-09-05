@@ -59,12 +59,12 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>echo "$@" &gt;&gt; "$HOME/.config/yt-dlp/action-download.log"
-
-url="$1"
+					<string>url="$1"
 if [[ "$url" != https://* ]]; then
     url="https://$url"
 fi
+
+echo "$url" &gt;&gt; "$HOME/.config/yt-dlp/action-download.log"
 
 PATH=$PATH:/opt/homebrew/bin yt-dlp "$url" &amp;&gt; /dev/null || true</string>
 					<key>CheckedForUserDefaultShell</key>
