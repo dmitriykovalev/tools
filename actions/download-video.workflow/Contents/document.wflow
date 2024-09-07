@@ -64,9 +64,12 @@ if [[ "$url" != https://* ]]; then
     url="https://$url"
 fi
 
-echo "$url" &gt;&gt; "$HOME/.config/yt-dlp/action-download.log"
+export PATH=$PATH:/opt/homebrew/bin
 
-PATH=$PATH:/opt/homebrew/bin yt-dlp "$url" &amp;&gt; /dev/null || true</string>
+date=$(date -Iseconds)
+title=$(yt-dlp --get-title "${url}")
+echo -e "${date}\t${url}\t${title}" &gt;&gt; "$HOME/.config/yt-dlp/action-download.log"
+yt-dlp "${url}" &amp;&gt; /dev/null || true</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
